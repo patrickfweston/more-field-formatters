@@ -11,11 +11,11 @@ If possible, extend from an existing Drupal 8 formatter.
 Also, add documentation to this README file about the formatter and its options.
 
 ## Plugins
-[Entity Reference](#Entity-Reference)
-[File](#File)
-[Image](#Image)
-[Link](#Link)
-[Text](#Text)
+[Entity Reference](#entity-reference)<br />
+[File](#file)<br />
+[Image](#image)<br />
+[Link](#link)<br />
+[Text](#text)<br />
 
 ### Entity Reference
 #### Label with class
