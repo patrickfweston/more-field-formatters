@@ -8,7 +8,15 @@ Contributions to this set of formatters is always welcome. If you create a new f
 
 If possible, extend from an existing Drupal 8 formatter.
 
+Also, add documentation to this README file about the formatter and its options.
+
 ## Plugins
+[Entity Reference](#Entity-Reference)
+[File](#File)
+[Image](#Image)
+[Link](#Link)
+[Text](#Text)
+
 ### Entity Reference
 #### Label with class
 Adds a class to an entity reference.
