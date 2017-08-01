@@ -1,4 +1,10 @@
 <?php
+/**
+ * @file
+ * Contains the LinkWithClass field formatter.
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
 
 namespace Drupal\more_field_formatters\Plugin\Field\FieldFormatter;
 

@@ -3,6 +3,7 @@
 /**
  * @file
  * Contains more_field_formatters.module.
+ * Copyright 2017 Palantir.net, Inc.
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;

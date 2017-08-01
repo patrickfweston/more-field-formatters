@@ -1,4 +1,10 @@
 <?php
+/**
+ * @file
+ * Contains the MoreFieldFormattersHelper class.
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
 
 namespace Drupal\more_field_formatters;
 

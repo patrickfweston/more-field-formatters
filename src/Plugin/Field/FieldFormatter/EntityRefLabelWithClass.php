@@ -1,4 +1,10 @@
 <?php
+/**
+ * @file
+ * Contains the EntityRefLabelWithClass field formatter.
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
 
 namespace Drupal\more_field_formatters\Plugin\Field\FieldFormatter;
 
@@ -89,13 +95,13 @@ class EntityRefLabelWithClass extends EntityReferenceLabelFormatter {
     $elements['element'] = [
       '#title' => t('Element'),
       '#type' => 'select',
-      '#values' => [
-        'div' => 'div',
+      '#options' => [
         'span' => 'span',
+        'div' => 'div',
         'p' => 'p',
         'li' => 'li',
       ],
-      '#default_value' => 'span'
+      '#default_value' => $this->getSetting('element')
     ];
 
     return $elements;

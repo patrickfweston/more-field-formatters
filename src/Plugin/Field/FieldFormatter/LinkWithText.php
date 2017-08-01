@@ -1,45 +1,42 @@
 <?php
+/**
+ * @file
+ * Contains the LinkWithText field formatter.
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
 
 namespace Drupal\more_field_formatters\Plugin\Field\FieldFormatter;
 
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\file\Plugin\Field\FieldFormatter\UrlPlainFormatter;
+use Drupal\link\Plugin\Field\FieldFormatter\LinkFormatter;
 
 /**
- * Plugin implementation of the 'file_url_plain' formatter.
+ * Plugin implementation for a link with text formatter.
  *
  * @FieldFormatter(
- *   id = "more_field_formatters_file_with_text",
- *   label = @Translation("Link to file with text"),
- *   description = @Translation("Displays a link to a file with custom, hard-coded text."),
+ *   id = "more_field_formatters_link_with_text",
+ *   label = @Translation("Link with text"),
+ *   description = @Translation("Displays a link with hard-coded text."),
  *   field_types = {
- *     "file"
+ *     "link"
  *   }
  * )
  */
-class FileWithText extends UrlPlainFormatter {
+class LinkWithText extends LinkFormatter {
 
   /**
    * {@inheritdoc}
    */
   public function viewElements(FieldItemListInterface $items, $langcode) {
-    $elements = array();
+    $elements = parent::viewElements($items, $langcode);
 
     $text = $this->getSetting('text');
 
-    foreach ($this->getEntitiesToView($items, $langcode) as $delta => $file) {
-      $elements[$delta] = array(
-        '#cache' => array(
-          'tags' => $file->getCacheTags(),
-        ),
-      );
-
+    foreach ($elements as &$element) {
       if ($text) {
-        $elements[$delta]['#markup'] = sprintf('<a href="%s">%s</a>', file_url_transform_relative(file_create_url($file->getFileUri())), $text);
-      }
-      else {
-        $elements[$delta]['#markup'] = file_url_transform_relative(file_create_url($file->getFileUri()));
+        $element['#title'] = $text;
       }
     }
 
