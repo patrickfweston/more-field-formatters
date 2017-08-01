@@ -1,0 +1,7 @@
+name: More Field Formatters
+type: module
+description: Additional formatters for Drupal 8 fields.
+core: 8.x
+package: Custom
+dependencies:
+  - image_url_formatter

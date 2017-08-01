@@ -1,0 +1,16 @@
+{
+  "name": "drupal/more_field_formatters",
+  "type": "drupal-module",
+  "description": "Additional formatters for Drupal 8 fields.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/more_field_formatters",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/more_field_formatters",
+    "source": "http://cgit.drupalcode.org/more_field_formatters"
+  },
+  "require": {
+      "drupal/image_url_formatter": "*"
+  }
+}
