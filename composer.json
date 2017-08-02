@@ -7,8 +7,8 @@
   "homepage": "http://www.palantir.net",
   "minimum-stability": "dev",
   "support": {
-    "issues": "https://www.drupal.org/project/issues/more_field_formatters",
-    "source": "http://cgit.drupalcode.org/more_field_formatters"
+    "issues": "http://www.palantir.net",
+    "source": "http://github.com/patrickfweston/more-field-formatters"
   },
   "require": {
       "drupal/image_url_formatter": "*"
